@@ -1,0 +1,32 @@
+<!-- General Navigation -->
+<div class="navigation-buttons">
+    <button onclick="changeSlide(-1)" class="prev" id="prevButton" >Previous</button>
+    <button onclick="toggleExpandableSection()" class="button" id="toggleSectionBtn">
+        <span class="material-icons">expand_less</span>
+    </button>
+    <button class="next" id="nextButton">Next</button>
+</div>
+
+<div class="expandable-section" id="expandableSection">
+    <button onclick="toggleExpandableSection()" class="button" id="close-section-btn">
+        <i class="material-icons">expand_more</i>
+    </button>
+    <h2>Create additional slides</h2>
+    <input type="text" placeholder="Slide topic..." class="slide-input">
+    <button class="commit-btn" onclick="generateContent()">Commit</button>
+</div>
+
+
+
+<script src="/js/courseContent.js"></script>
+<script src="/js/genSlides.js"></script>
+<script>function toggleExpandableSection() {
+  const section = document.getElementById('expandableSection');
+  
+  if (section.style.display === 'none' || section.style.display === "") {
+    section.style.display = 'block';
+  } else {
+    section.style.display = 'none';
+  }
+}
+</script>

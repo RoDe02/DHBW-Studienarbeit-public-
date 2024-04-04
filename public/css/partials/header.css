@@ -1,0 +1,50 @@
+/* header.css */
+
+:root {
+  --header-height: 60px;
+  --header-top-bottom-padding: 1em;
+}
+
+.header {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa; /* Light grey background */
+    padding: var(--header-top-bottom-padding) 2em;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  }
+  
+  .header .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header nav {
+    display: flex;
+  }
+  
+  .header nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 0 1em;
+  }
+  
+  .header nav a:hover {
+    color: var(--primary-color-darker);
+    text-decoration: underline; /* Interactive element to indicate hover state */
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+    }
+  
+    .header nav {
+      padding-top: 1em;
+    }
+  
+    .header nav a {
+      padding: 0.5em 0; /* Increased spacing for mobile view */
+    }
+  }  

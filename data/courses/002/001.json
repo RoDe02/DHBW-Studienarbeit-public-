@@ -1,0 +1,50 @@
+{
+    "id": "001",
+    "category": "002",    
+    "title": "Python Programming Essentials for Computer Science Students",
+    "creator": "ChatGPT - GPT-4",
+    "heroImg": "\\images\\courses\\cat-002\\course-001\\002_001_hero.webp",
+    "shortDescription": "Dive into Python, from basics to advanced concepts, and become a skilled Python developer!",
+    "description": "This online course is meticulously designed for 3rd semester computer science students to seamlessly bridge the gap between theoretical concepts and their practical application in Python programming. Engaging content paired with interactive exercises and real-world case studies equip students with a comprehensive understanding of Python syntax, alongside a grasp of control structures essential for decision-making and looping. The course delves into functions and modules to enhance code reusability, and empowers students to apply their acquired knowledge in analyzing data and tackling complex problems.<br><br>The course is enriched with an in-depth exploration of Python fundamentals to establish a robust coding foundation, accompanied by step-by-step guides that unveil Python's versatile features and libraries. It offers hands-on tasks and projects for applying learning in tangible scenarios, alongside interactive quizzes designed to reinforce understanding and assess knowledge. Moreover, students gain access to a vibrant community of learners, fostering collaboration and support.<br><br>Upon completion, students will possess the ability to craft efficient and effective Python code, laying a solid groundwork for further academic pursuits and professional advancement in fields such as software development, data analysis, artificial intelligence, and beyond.",
+    "difficultyLevel": "Intermediate",
+    "content": [
+        {
+            "type": "slide",
+            "title": "Welcome to Python: The Gateway to Advanced Programming",
+            "body": "Welcome to an immersive exploration of Python, a versatile and powerful programming language that stands at the forefront of software development, data analysis, artificial intelligence, web development, and much more. This course is designed for 3rd semester computer science students eager to deepen their understanding of Python and its myriad applications. You will embark on a journey that not only solidifies your foundational knowledge but also propels you into the realm of advanced programming concepts. Through a blend of theoretical insights, practical applications, and cutting-edge case studies, you will discover the depth of Python's capabilities and its significance in solving real-world challenges. Get ready to enhance your coding skills, analytical thinking, and problem-solving abilities."
+        },
+        {
+            "type": "slide",
+            "title": "Mastering Python's Data Structures for Efficient Coding",
+            "body": "Python's data structures are fundamental to writing efficient and readable code. In this segment, we explore Lists, Dictionaries, Sets, and Tuples, focusing on their unique characteristics, use cases, and performance implications. Understanding these data structures enables developers to choose the most appropriate one for their specific needs, optimizing code for speed and memory efficiency.<br><br><ul><li>Lists: Dynamic arrays suitable for storing ordered collections. They support operations like appending, sorting, and slicing.</li><li>Dictionaries: Key-value pairs that are fast for lookups and ideal for storing relationships and mapping information.</li><li>Sets: Unordered collections of unique elements, excellent for membership testing, deduplication, and set operations like union and intersection.</li><li>Tuples: Immutable sequences, typically used to store heterogeneous data, making code safer from modifications and errors.</li></ul>"
+        },
+        {
+            "type": "slide",
+            "title": "Building Dynamic Websites with Flask",
+            "body": "Flask, a micro web framework written in Python, exemplifies the language's versatility in web development. This section covers Flask's fundamentals, its minimalist approach allowing for the rapid development of web applications, and how it compares with Django, another Python web framework. We delve into Flask's routing mechanisms, template rendering, and form handling, showcasing how these features can be leveraged to create lightweight, dynamic websites.<br><br>Code Snippet:<br><i><pre>from flask import Flask, render_template<br>app = Flask(__name__)<br><br>@app.route('/')<br>def home():<br>    return render_template('home.html')<br><br>if __name__ == '__main__':<br>    app.run(debug=True)</pre></i>"
+        },
+        {
+            "type": "slide",
+            "title": "Python at the Heart of Machine Learning",
+            "body": "Python's simplicity and vast ecosystem of libraries, such as TensorFlow and PyTorch, have made it the lingua franca of machine learning (ML). This slide provides an overview of Python's application in ML, highlighting key libraries and their functionalities. We explore a case study on natural language processing (NLP), demonstrating how Python's tools and libraries can be used to develop models capable of understanding human language, with applications ranging from sentiment analysis to chatbots.",
+            "image": "\\images\\courses\\cat-002\\course-001\\001_s3.png",
+            "imageDescription": "The image displays a collection of prominent Python libraries for data science and machine learning, arranged around the central Python logo. From the top and moving clockwise, we see the logos for PyTorch, Keras, NumPy, scikit-image, SciPy, scikit-learn, TensorFlow, OpenCV, matplotlib, and pandas. Each logo is distinctive, representing the library's purpose, like PyTorch's spiral for neural network layers, Keras's \"K\" for its user-friendliness, NumPy's 3D array, scikit-image's camera aperture for image processing, SciPy's scientific focus with the subscript \"i\", scikit-learn's plotted graph for machine learning, TensorFlow's interconnected \"TF\" for computational graphs, OpenCV's emphasis on computer vision, matplotlib's chart for plotting, and pandas's panda face for data manipulation. The arrangement suggests a harmonious ecosystem centered around Python for advanced computing tasks.",
+            "imgTitle": "Source: https://www.alpha-quantum.com/blog/machine-learning-python/machine-learning-with-python/"
+        },
+        {
+            "type": "free-text-task",
+            "title": "Understanding Data Structures",
+            "body": "Describe the main difference between a List and a Set in Python. When would you prefer to use one over the other?"
+        },
+        {
+            "type": "free-text-task",
+            "title": "Analyzing Flask's Role in Web Development",
+            "body": "Compare and contrast Flask and Django in terms of their suitability for different types of web development projects. Consider factors such as project size, scalability, and development speed."
+        },
+        {
+            "type": "free-text-task",
+            "title": "Machine Learning Model Design",
+            "body": "Given a dataset containing thousands of customer reviews, design a Python-based machine learning workflow to perform sentiment analysis. Outline the steps you would take, from data preprocessing to model training, and the libraries you would use at each step."
+        }
+    ]
+}

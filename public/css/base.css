@@ -1,0 +1,96 @@
+/* base.css */
+:root {
+  --primary-color: #007bff; /* Soft desaturated blue */
+  --primary-color-darker: #0056b3; /* Slightly darker blue */
+  --accent-color: #ff6b6b; /* Vibrant coral */
+  --accent-color-darker: #fa5252; /* Slightly darker coral*/
+  --text-color: #333; /* Dark charcoal grey */
+  --text-color-lighter: #666; /* Lighter charcoal grey*/
+  --neutral-base: #f5f5f5; /* Light grey */
+  --secondary-base: #ced4da; 
+}
+
+/* Base element styles for simplicity and clarity */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--neutral-base); 
+  color: var(--text-color); 
+}
+
+/* Typography for elegance and readability */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color); 
+  margin-top: 0;
+  font-weight: 300;
+}
+
+p {
+  line-height: 1.6;
+  color: var(--text-color);
+}
+  
+/* Interactive and content-centric elements */
+button, .button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .button:hover {
+  background-color: var(--accent-color-darker);
+}
+
+/* Structural elements styled for balance and contrast */
+.container {
+  width: 80%;
+  margin: auto;
+  padding-top: 20px;
+}
+
+/* Elegance and balance in form elements */
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  border: 1px solid var(--secondary-base); /* Grey border for inputs */
+  border-radius: 5px;
+}
+
+/* Media queries for a responsive design */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+}
+
+.dropdown-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  padding-top: 32px; /* Top padding */
+}
+
+select {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  padding-right: 40px; /* Increase right padding to make space for the arrow */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white"><polygon points="0,0 20,0 10,10"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 15px center; /* Adjust this value as needed */
+  background-size: 12px;
+}
+
+select:hover {
+  background-color: var(--primary-color-darker);
+}

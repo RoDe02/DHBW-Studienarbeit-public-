@@ -1,0 +1,46 @@
+/* footer.css */
+
+:root {
+    --footer-height: calc(var(--header-height) * (2/3)); 
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--footer-height);
+    background-color: var(--text-color-lighter);
+    color: white;
+    padding: 0 2em;
+  }
+  
+  .footer-logo {
+    height: 80%;
+  }
+  
+  .footer-nav {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+  }
+  
+  .footer-nav a {
+    color: white;
+    text-decoration: none;
+    padding-left: 2em; /* Add space between the links */
+  }
+  
+  .footer-nav a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: row;
+      padding: 1em;
+    }
+  
+    .footer-nav a {
+      padding-left: 0.5em;
+    }
+  }  

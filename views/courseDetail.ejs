@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= course.title %> - Course Details</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/courseDetail.css">
+  <link rel="stylesheet" href="/css/partials/header.css">
+  <link rel="stylesheet" href="/css/partials/footer.css">
+  
+</head>
+<body>
+    <%- include('partials/header') %> 
+
+    <main class="course-detail">
+        <h1><%= course.title %></h1>
+        <p class="category"><%= course.categoryName %></p>
+        <p class="creator">Created by: <%= course.creator %></p>
+        <p class="difficulty">Difficulty: <%= course.difficultyLevel %></p>
+        <div class="description">
+        <%- course.description %>
+        </div>  
+        <div class="dropdown-container">
+          <select name="promptSelect" id="promptSelect">
+            <option value="standard" selected>Standard Prompting</option>
+            <option value="role">Role Prompting</option>
+            <option value="seedword">Seedword Prompting</option>
+          </select>
+        </div>  
+        <button class="button start-course-btn" onclick="startCourse()">Start course</button>     
+   </main>
+
+    
+    <script>
+      var courseId = <%- JSON.stringify(course.id) %>;      
+      var courseCategory = <%- JSON.stringify(course.category) %>;      
+    </script>
+    <script src="/js/courseDetails.js"></script>
+</body>
+</html>

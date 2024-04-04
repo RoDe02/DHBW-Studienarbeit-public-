@@ -1,0 +1,94 @@
+/* carousel.css */
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    padding: 2rem;
+    padding-bottom: 1em;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: var(--primary-color) var(--secondary-base);
+  }
+  
+  .course-carousel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.course-carousel::-webkit-scrollbar-track {
+    background: var(--secondary-base);
+}
+
+.course-carousel::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color-darker); 
+}
+  
+  .card {
+    flex: 0 0 auto;
+    width: 300px; /* Width of the card */
+    margin-right: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-title {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-text {
+    color: var(--text-color-lighter);
+    font-size: 1rem;
+    flex-grow: 1;
+  }
+  
+  .card-category {
+    color: var(--primary-color); /* Soft desaturated blue */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-difficulty {
+    color: var(--accent-color); /* Vibrant coral */
+    font-weight: bold;
+  }
+
+  
+.card-button {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    margin-top: 1rem;
+  }
+
+  
+  /* Media query for responsive design */
+  @media (max-width: 768px) {
+    .card {
+      width: 80%;
+    }
+  }
+  

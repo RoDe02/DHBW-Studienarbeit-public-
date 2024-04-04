@@ -1,0 +1,267 @@
+
+/* General container styles */
+.container {
+  display: flex;
+  height: calc(100vh - 6rem); /* Adjust if you have a header/footer */
+}
+
+/* Styles for the course content area */
+.course-content-container {
+  text-align: left;
+  width: 75%;
+  overflow-y: auto;
+  position: relative;
+  height: 100%;
+  padding-bottom: 4rem; /* Padding for the fixed navigation buttons */
+}
+
+/* Slide styles */
+.slide {
+  display: none;
+  padding: 1rem;
+}
+
+.slide.active {
+  display: block;
+}
+
+/* Image styles */
+.slide img {
+  max-width: 75%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.slide textarea {
+  height: 15em;
+}
+
+/* Chat container styles */
+.chat-container {
+  width: 50%;
+  padding: 1rem;
+  border-left: 1px solid var(--text-color-lighter);
+  background: var(--neutral-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+
+.message {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.user-message {
+  background-color: var(--text-color);
+  color: white;
+}
+
+.ai-message {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.ai-message p{
+  background-color: var(--primary-color);
+  color: white;
+}
+
+
+/* Styles for navigation buttons */
+.navigation-buttons {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--neutral-base);
+  padding: 1rem;
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  gap: 1rem;
+}
+
+.chat-input-container {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.prev, .next {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.prev[disabled], .next[disabled], .submit-answer-btn[disabled], .submit-quiz-btn[disabled] {
+  background-color: var(--text-color-lighter);
+  cursor: not-allowed;
+}
+
+
+.chat-send-btn:disabled {
+  background-color: var(--text-color-lighter);
+  cursor: not-allowed;
+}
+
+.chat-send-btn:hover {
+  background-color: var(--primary-color-darker);
+}
+
+
+
+
+
+
+
+
+
+
+.chat-input {
+  flex-grow: 1;
+  border: 1px solid var(--neutral-dark);
+  /* Adjust the padding to ensure input and button are of the same height */
+  padding: 0.375rem 0.75rem; /* Bootstrap's default padding for input */
+  /* Remove margins to prevent misalignment */
+  margin-bottom: 0;
+  /* Align the text inside the input */
+  line-height: 1.5; /* Bootstrap's default line-height for input */
+}
+
+.chat-send-btn {
+  /* Padding should match the input field's padding for consistent height */
+  padding: 0.375rem 0.75rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  /* Setting line-height to normal to ensure vertical alignment */
+  line-height: normal;
+  /* Align the button text */
+  text-align: center;
+  /* Add box-sizing to include padding in the height calculation */
+  box-sizing: border-box;
+  /* Set margin-left to create a small gap between the input and the button */
+  margin-left: 0.5rem;
+}
+
+
+
+/* Styles for the free-text task */
+.free-text-task textarea {
+  width: calc(100% - 1rem); /* Full width with padding considered */
+  margin: 0.5rem 0; /* Margin for spacing */
+  padding: 0.5rem; /* Padding inside the textarea */
+  border: 1px solid var(--neutral-dark); /* Border color */
+  border-radius: 4px; /* Rounded corners */
+  height: 150px; /* Fixed height for the textarea */
+  resize: vertical; /* Allows vertical resizing */
+}
+
+.submit-answer-btn {
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-color); /* Vibrant coral for CTA buttons */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem; /* Spacing above the submit button */
+}
+
+/* Styles for the quiz */
+.quiz-question {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.quiz-question label {
+  display: block;
+  padding: 0.25rem 0; /* Padding for each quiz option */
+}
+
+.quiz-question input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+.submit-quiz-btn {
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-color); /* Vibrant coral for CTA buttons */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem; /* Spacing above the submit button */
+}
+
+
+
+
+
+
+/* Styles for the expandable section */
+.expandable-section {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--neutral-base);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1rem 0;
+  z-index: 100; /* Higher than the content to stay above it */
+  
+  display: none; /* Hidden by default */
+}
+
+.expandable-content {
+  display: none;
+  padding: 1rem;
+}
+
+.slide-input, .commit-btn {
+  margin-top: 0.5rem; /* Spacing between elements */
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.commit-btn:disabled {
+  background-color: var(--text-color-lighter);
+  cursor: not-allowed;
+}
+
+
+.expandable-section h2 {
+  margin-bottom: 1rem;
+}
+
+.expandable-section .slide-input {
+  width: 100%;
+  margin-bottom: 1rem;
+  border: 1px solid var(--text-color-lighter);
+  width: 90%;
+}
+
+
+.commit-btn {
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  font-size: 15px;
+}

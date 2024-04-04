@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= course.title %> - Course Content</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/courseContent.css">
+  <link rel="stylesheet" href="/css/partials/modalImg.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Include other necessary CSS files -->
+</head>
+<body>
+  <div class="container">
+    <div class="course-content-container">
+      <% course.content.forEach((content, i) => { %>
+        <div class="slide <%= i === 0 ? 'active' : '' %>" id="slide-<%= i %>">
+          <% if(content.type === 'slide') { %>                          
+            <h2><%= content.title %></h2>
+            <% if (content.image) { %>
+              <img class="zoomableImg" src="<%= content.image %>" alt="<%= content.imgTitle %>">
+            <% } %>  
+            <div id="content-body"><%- content.body %></div>
+          <% } else if(content.type === 'free-text-task') { %>
+            <h2><%= content.title %></h2>
+            <% if (content.image) { %>
+              <img class="zoomableImg" src="<%= content.image %>" alt="<%= content.title %>">
+            <% } %>  
+            <div id="content-body"><%- content.body %></div>
+            <textarea id="free-text-input" placeholder="Type your answer here..."></textarea>
+            <button class="submit-answer-btn" onclick="submitFreetextTask()">Submit Answer</button>
+          <% } else if(content.type === 'quiz') { %>
+            <h2><%= content.title %></h2>
+            <% content.questions.forEach((question, qIndex) => { %>
+              <div class="quiz-question" id="question-<%= qIndex %>">
+                <div id="content-body"><strong><%- question.question %></strong></div>
+                <% question.options.forEach((option, oIndex) => { %>
+                  <label>
+                    <input type="radio" name="question-<%= qIndex %>" value="<%- option %>">
+                    <%- option %>
+                  </label>
+                <% }) %>
+              </div>
+            <% }) %>
+            <button class="submit-quiz-btn" onclick="submitQuizTask()">Submit Quiz</button>
+          <% } %>
+        </div>
+      <% }) %>
+    </div>
+    <%- include('partials/chat') %> 
+  </div>
+  
+    <%- include('partials/modalImg') %> 
+
+    <%- include('partials/contentNavigation') %> 
+
+    <script>
+      var course = <%- JSON.stringify(course) %>;      
+    </script>
+    <script src="/js/taskEvaluation.js"></script>
+    <script src="/js/openAI_Api.js"></script>
+  </body>
+</html>

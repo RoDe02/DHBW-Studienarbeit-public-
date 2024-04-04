@@ -1,0 +1,53 @@
+{
+    "id": "001",
+    "category": "003",    
+    "title": "Agile Project Management Mastery: The Scrum Framework",
+    "creator": "ChatGPT - GPT-4",
+    "heroImg": "\\images\\courses\\cat-003\\course-001\\003_001_hero.webp",
+    "shortDescription": "Unlock the power of Agile project management with an in-depth exploration of Scrum. Learn how to boost efficiency, collaboration, and adaptability in your projects with this comprehensive course.",
+    "description": "This course is meticulously designed for third-semester computer science students and professionals keen on mastering Scrum, a cornerstone of Agile project management. Through a blend of theoretical insights and practical applications, participants will dive deep into the Scrum framework, understanding its principles, roles, ceremonies, and artifacts. The curriculum covers everything from the basics of initiating a Scrum project to advanced concepts like scaling Scrum for large organizations. With a focus on real-world applications, participants will engage in interactive learning experiences, including case studies from leading tech companies like Spotify, to see Scrum in action. This course is your gateway to becoming an adept Scrum practitioner, ready to tackle modern project challenges with agility and confidence.",
+    "difficultyLevel": "Intermediate",
+    "content": [
+        {
+            "type": "slide",
+            "title": "Welcome to Agile Project Management: Understanding Scrum",
+            "body": "This course module offers an in-depth exploration of Scrum, a pivotal framework within Agile Project Management. Designed for 3rd semester computer science students, this segment aims to equip you with the knowledge and skills necessary to effectively implement Scrum practices in diverse project settings. Through this course, you'll delve into the core principles of Scrum, its roles, ceremonies, and artifacts, and understand how it fosters collaboration, flexibility, and efficiency in project management. We'll explore theoretical foundations, practical applications, and recent advancements in the field, preparing you for real-world challenges. Get ready to engage with a dynamic learning experience that includes case studies, interactive tasks, and comprehensive content tailored to enhance your project management acumen."
+        },
+        {
+            "type": "slide",
+            "title": "Unpacking the Scrum Framework",
+            "body": "Scrum is an agile framework designed to add flexibility and adaptability in managing complex projects. At its core, Scrum divides projects into small, manageable tasks known as Sprints, typically lasting 2-4 weeks. Each Sprint aims to produce a shippable product increment, allowing teams to adapt and make changes quickly. Key components of the Scrum framework include:<br><ul><li>Roles: Product Owner, Scrum Master, and Development Team</li><li>Ceremonies: Sprint Planning, Daily Stand-ups, Sprint Review, and Sprint Retrospective</li><li>Artifacts: Product Backlog, Sprint Backlog, and Increment</li></ul>",
+            "image": "\\images\\courses\\cat-003\\course-001\\001_s1.png",
+            "imageDescription": "The image is a flowchart depicting the Scrum framework for agile software development. On the left, a clipboard with a checklist signifies the Product Backlog, leading to \"Sprint Planning,\" symbolized by a calendar. This progresses to a circular diagram representing the \"Scrum Team,\" consisting of \"Dev\" (Development Team), \"SM\" (Scrum Master), and \"PO\" (Product Owner). Three overlapping circles around the team indicate ongoing activities: \"Daily Scrum\" (stand-up meetings), \"Sprint Review\" (evaluating the work done), and \"Sprint Retrospective\" (looking back at the process for improvements). Arrows connect these elements in a cyclic flow, showing the iterative nature of the process.",
+            "imgTitle": "Source: https://www.scrum.org/resources/what-scrum-module"
+        },
+        {
+            "type": "slide",
+            "title": "Implementing Scrum: A Practical Approach",
+            "body": "Applying Scrum principles effectively requires a blend of theory and practice. This slide focuses on the practical application of Scrum in a software development project. Imagine a scenario where a team is developing a new mobile application. The Product Owner has identified a set of features critical for the app's first release.<br><ul><li>Sprint Planning: The team selects features from the Product Backlog to develop during the Sprint.</li><li>Daily Stand-up: A 15-minute meeting where team members report on their progress and obstacles.</li><li>Sprint Review: Demonstrating the completed features to stakeholders for feedback.<li></li>Sprint Retrospective: Reflecting on the past Sprint to improve processes and work in the next Sprint.</li></ul>"
+        },
+        {
+            "type": "slide",
+            "title": "Scrum in Action: The Spotify Model",
+            "body": "This case study explores how Spotify, a leading music streaming service, adapted the Scrum framework to scale its agile practices across a rapidly growing engineering team. Spotify's innovative approach includes:<br><ul><li>Squads: Cross-functional teams that operate like mini-startups, each responsible for specific features.</li><li>Tribes: Collections of squads that work in related areas, encouraging collaboration and knowledge sharing.</li><li>Guilds and Chapters: Voluntary groups for sharing knowledge across the company in specific domains.</li></ul>",
+            "image": "\\images\\courses\\cat-003\\course-001\\001_s3.png",
+            "imageDescription": "The image illustrates the organizational structure of two \"Tribes\" in a business model. Each tribe is a collection of \"Squads,\" depicted as groups of individual icons representing team members. Above the squads are \"Chapters,\" indicated by rectangles that span across multiple squads, showing that chapter members are distributed among different squads. At the top of each tribe are designated roles marked \"PO,\" representing Product Owners. A dotted purple line labeled \"Guild\" connects the two tribes, intersecting the chapters. This indicates that guild members are also spread across different squads and tribes, suggesting a cross-tribal exchange of knowledge or practice. Each tribe appears to be a mirror of the other, with identical structures and roles.",
+            "imgTitle": "Source: https://agilescrumgroup.de/spotify-modell/"
+        },
+        {
+            "type": "free-text-task",
+            "title": "Basic Understanding",
+            "body": "Describe the roles within a Scrum team and their responsibilities."
+        },
+        {
+            "type": "free-text-task",
+            "title": "Analytical Skills",
+            "body": "Compare and contrast the Scrum framework with the Waterfall model of project management. What are the advantages and disadvantages of each?"
+        },
+        {
+            "type": "free-text-task",
+            "title": "Complex Problem-Solving",
+            "body": "Imagine a company struggling with delayed project deliveries and low team morale. Propose a detailed plan on how implementing Scrum could address these issues. Include steps for the initial transition, key roles to be established, and metrics for measuring success."
+        }
+    ]
+}

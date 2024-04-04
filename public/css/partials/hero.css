@@ -1,0 +1,43 @@
+/* hero.css */
+
+:root {
+    --hero-padding: 1em;
+  }
+
+.hero {
+    position: relative;
+    width: 100%;
+    /* 100vh - header height - header padding - hero padding*/
+    height: calc(100vh - var(--header-height) - 2*var(--header-top-bottom-padding) - var(--hero-padding)/4); 
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-banner {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.80); /* Half-transparent background */
+    padding: calc(var(--hero-padding)/2) 0 var(--hero-padding) 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-banner h1 {
+    color: #fff; /* White color for the heading */
+    font-size: 2.5em;
+    margin-bottom: 0.25em;
+  }
+  
+  .hero-banner p {
+    color: #fff; /* White color for the paragraph */
+    font-size: 1.25em;
+    margin-top: 0;
+    margin-bottom: 0.75em;
+  }

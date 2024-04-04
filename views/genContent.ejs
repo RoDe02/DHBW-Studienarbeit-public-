@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Content - Course Content</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/courseContent.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="course-content-container" id="courseContentContainer">
+      <!-- Generated slides will be appended here -->      
+    </div>
+    
+    <%- include('partials/chat') %> 
+  </div>
+  
+  <%- include('partials/contentNavigation') %> 
+    <script>
+      // Helper function to create a DOM element with attributes and content
+      function createElement(tag, attributes, content) {
+        const element = document.createElement(tag);
+        for (const key in attributes) {
+          element.setAttribute(key, attributes[key]);
+        }
+        if (content) {
+          element.innerHTML = content;
+        }
+        return element;
+      }
+
+      // Retrieves the data from sessionStorage and creates the HTML elements
+      function generateContentFromSession() {
+          const courseContentContainer = document.getElementById('courseContentContainer');
+          var genContent = JSON.parse(sessionStorage.getItem('genContent'));
+          genContent = genContent.content;
+
+          if (genContent) {
+              genContent.forEach((content, index) => {
+              let contentElement = createElement('div', { 'class': 'slide', 'id': `slide-${index}` });
+
+              if (content.type === 'slide') {
+                  contentElement.appendChild(createElement('h2', {}, content.title));
+                  contentElement.appendChild(createElement('p', {id: "content-body"}, content.body.replace(/(\d+)\./g, "<br>$1.")));
+              } else if (content.type === 'free-text-task') {
+                  contentElement.appendChild(createElement('h2', {}, content.title));
+                  contentElement.appendChild(createElement('p',{id: "content-body"}, content.body));
+                  contentElement.appendChild(createElement('textarea', {id: "free-text-input"}));
+                  var submitBtn = createElement('button', { 'class': 'submit-answer-btn' }, 'Submit Answer');
+                  contentElement.appendChild(submitBtn);
+                  submitBtn.addEventListener('click', submitFreetextTask);
+              } else if (content.type === 'quiz') {
+                  contentElement.appendChild(createElement('h2', {}, content.title));
+                  const questions = content.questions;
+                  questions.forEach((question, qIndex) => {
+                  let questionElement = createElement('div', { 'class': 'quiz-question', 'id': 'question-'+qIndex });
+                  questionElement.appendChild(createElement('p', {id: "content-body"}, question.question));
+                  question.options.forEach(option => {
+                      let label = createElement('label', {});
+                      label.appendChild(createElement('input', { 'type': 'radio', 'name': `question-${qIndex}`, 'value': option }));
+                      label.appendChild(document.createTextNode(option));
+                      questionElement.appendChild(label);
+                  });
+                  contentElement.appendChild(questionElement);
+                  });
+                  contentElement.appendChild(createElement('button', { 'class': 'submit-quiz-btn', 'onclick': "submitQuizTask()" }, 'Submit Quiz'));
+              }
+
+              // Append the new slide to the container
+              courseContentContainer.appendChild(contentElement);
+              });
+          }
+
+          document.getElementById('slide-0').classList.add('active');
+          slides = document.querySelectorAll('.slide'); // init var for navigation
+          
+      var course = genContent;
+      }
+
+      // Call the function to generate content when the page loads
+      document.addEventListener('DOMContentLoaded', generateContentFromSession);
+    </script>
+    <script>
+      var course = JSON.parse(sessionStorage.getItem('genContent'));
+    </script>
+    <script src="/js/taskEvaluation.js"></script>
+    <script src="/js/openAI_Api.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* courseDetail.css */
+
+.course-detail {
+    max-width: 800px;
+    margin: 1rem auto;
+    padding: 1rem;
+    background: #ffffff; /* Neutral base */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+  }
+  
+  .course-detail h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .course-detail .category {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .course-detail .creator,
+  .course-detail .difficulty {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .course-detail .description {
+    margin-top: 2rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  .start-course-btn {
+    display: block;
+    width: max-content;
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  

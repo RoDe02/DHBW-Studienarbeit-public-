@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Supported E-Learning - Courses</title>
+  <link rel="stylesheet" href="/css/base.css">
+  
+  <link rel="stylesheet" href="/css/partials/header.css">  
+  <link rel="stylesheet" href="/css/partials/footer.css">
+  <link rel="stylesheet" href="/css/partials/carousel.css">
+
+  <style>
+    .category-hero {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    .category-hero img {
+      /*Orig Img: 1792x360*/
+      width: 100%;
+      height: auto;
+    }
+
+    .category-hero-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2em; /* Adjust font size as needed */
+    }
+  </style>
+</head>
+<body>
+    <!-- Including the header partial -->
+    <%- include('partials/header') %>
+
+    <!-- List of Courses -->
+    <% Object.entries(categories).forEach(([categoryId, category]) => { %>
+      <div class="category-hero">
+        <img src="<%= category.heroImg %>" alt="Hero Image for <%= category.category %>">
+      </div>    
+      <%- include('partials/Carousel', { courses: category.courses }) %>
+    <% }) %>
+    <!-- Including the header partial -->
+    <%- include('partials/footer') %>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!-- Carousel.ejs -->
+<div class="carousel">
+  <% courses.forEach(course => { %>
+      <div class="card">
+        <img src="<%= course.heroImg ? course.heroImg : 'https://placehold.co/300x200' %>" height="300px" alt="<%= course.title %> Image" class="card-img">
+        <div class="card-body">
+          <h5 class="card-title"><%= course.title %></h5>
+          <p class="card-text"><%= course.shortDescription %></p>
+          <p class="card-category"><%= course.categoryName %></p>
+          <p class="card-difficulty"><%= course.difficultyLevel %></p> 
+          <a href="/course?id=<%= course.id %>&category=<%= course.category %>" class="button card-button">Learn More</a>
+        </div>
+      </div>
+    <% }) %>
+</div>
+  

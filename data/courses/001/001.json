@@ -1,0 +1,53 @@
+{
+    "id": "001",
+    "category": "001",    
+    "title": "Mastering Derivatives: Calculus for Computer Science",
+    "creator": "ChatGPT - GPT-4",
+    "heroImg": "\\images\\courses\\cat-001\\course-001\\001_001_hero.webp",
+    "shortDescription": "Dive into the world of derivatives to unlock the mathematical secrets behind optimization, algorithms, and more in computer science.",
+    "description": "This course offers a deep dive into the concept of derivatives, a fundamental pillar of calculus with profound applications in computer science. From understanding the basic definitions and rules to applying derivatives in real-world scenarios like algorithm optimization and data analysis, students will gain a comprehensive understanding of how calculus shapes the technologies and solutions in the field of computer science. Through a blend of theoretical knowledge and practical exercises, including calculation tasks and conceptual quizzes, learners will develop the skills needed to apply calculus concepts to solve complex problems. Whether you're aiming to enhance your analytical skills, delve into machine learning, or optimize algorithms, this course is designed to equip you with the mathematical foundation required for success in computer science and beyond.",
+    "difficultyLevel": "Intermediate",
+    "content": [
+        {
+            "type": "slide",
+            "title": "The Power of Differentiation: A Mathematical Journey",
+            "body": "Welcome to our exploration of Differentiation, a fundamental concept in Calculus and an indispensable tool across various domains of Mathematics and beyond. This course aims to deepen your understanding of differentiation, its principles, techniques, and the vast array of its applications. From the basic definition of a derivative to the advanced techniques for solving real-world problems, we will embark on a journey that highlights the relevance of differentiation in fields such as physics, engineering, economics, and computer science. Prepare to uncover the beauty and utility of differentiation through theoretical insights, practical applications, and cutting-edge research findings."
+        },
+        {
+            "type": "slide",
+            "title": "Foundations of Differentiation: Derivatives Defined",
+            "body": "Differentiation is the process of finding the derivative of a function, which represents the rate at which a function's output changes with respect to changes in its input. At its core, the derivative of a function at a point <code>f'(a)</code> gives the slope of the tangent line to the function's graph at that point, defined as <code>f'(a) = lim(h → 0) (f(a+h) - f(a)) / h</code>. This concept is crucial for understanding how functions behave and change, setting the groundwork for more complex analysis and applications.",
+            "image": "\\images\\courses\\cat-001\\course-001\\001_s1.png",
+            "imageDescription": "The graph displays a dark blue curve representing the quadratic function f(x)=x^2+2x+1 across a range of x values from -10 to 10. An orange dashed line, representing the tangent to the curve at x=5, intersects the curve at a point marked by a red dot. The slope of this tangent line, indicative of the derivative of the function at x=5, is annotated in purple text positioned slightly to the right and at the same vertical level as the red dot, reading \"f'(5) = 12\". The graph features a grid background, with axes labeled 'x' and 'f(x)', and includes a legend identifying the curve and the tangent line.",
+            "imgTitle": "Function Visualization with Tangent Line and Derivative Annotation"
+        },
+        {
+            "type": "slide",
+            "title": "Gradient Descent: Differentiation in Machine Learning",
+            "body": "Differentiation plays a pivotal role in optimizing algorithms in computer science, especially in machine learning. One key application is the Gradient Descent algorithm, which minimizes a function to find its lowest point. By calculating the gradient (or the derivative) of the loss function, which measures the difference between the algorithm's predictions and actual data, we can adjust parameters to improve the model's accuracy systematically. The update rule is given by <code>θ_new = θ_old - α · ∇θ J(θ)</code>, where <code>θ</code> represents parameters, <code>J(θ)</code> is the loss function, <code>α</code> is the learning rate, and <code>∇θ J(θ)</code> is the gradient of the loss function with respect to <code>θ</code>.",
+            "image": "\\images\\courses\\cat-001\\course-001\\001_s2.png",
+            "imageDescription": "The image shows a 3D plot of a quadratic loss function, f(x,y)=x^2 + y^2, with a gradient descent path towards the minimum. The loss function surface is visualized in green and yellow shades, indicating varying loss levels. A red path with marked circles illustrates the algorithm's steps from a higher loss point down to the minimum at the origin. Axis labels are X, Y, and Loss, with scaled-down numerical labels for clarity. The visualization effectively demonstrates the iterative approach of gradient descent navigating the loss surface to minimize loss.",
+            "imgTitle": " Gradient Descent Visualization on a 3D Loss Function Surface"
+        },
+        {
+            "type": "slide",
+            "title": "Beyond Traditional Calculus: Automatic Differentiation",
+            "body": "A breakthrough in computational mathematics and machine learning is Automatic Differentiation (AD), a set of techniques to efficiently and accurately compute derivatives of complex functions. Unlike symbolic or numerical differentiation, AD exploits the chain rule to decompose derivatives into a sequence of elementary operations, thereby reducing computational complexity and enhancing precision in applications like deep learning. AD is based on decomposing functions into elementary operations for which derivatives are known, and then applying the chain rule, which for functions composed of operations <code>f</code> and <code>g</code> is expressed as <code>d/dx(f(g(x))) = f'(g(x)) · g'(x)</code>."
+        },
+        {
+            "type": "free-text-task",
+            "title": "Task 1: Basic Understanding",
+            "body": "Explain the significance of the derivative of a function at a point in your own words, referencing the formula:<br><code>f'(a) = lim_{h -&gt; 0} (f(a+h) - f(a)) / h</code>"
+        },
+        {
+            "type": "free-text-task",
+            "title": "Task 2: Analytical Skills",
+            "body": "Compare and contrast numerical differentiation and symbolic differentiation, focusing on their methodologies, advantages, and limitations. Consider the differences in approximation methods for numerical differentiation like forward and central differences, and the use of algebraic manipulation in symbolic differentiation."
+        },
+        {
+            "type": "free-text-task",
+            "title": "Task 3: Complex Problem-Solving",
+            "body": "Consider a scenario in which you're developing a machine learning model to predict housing prices. Describe how you would apply the concept of gradient descent to optimize your model. Include considerations for selecting a loss function, calculating gradients using the formula:<br><code>θ_new = θ_old - α * ∇_θ J(θ)</code><br>and adjusting model parameters based on these gradients. Discuss how differentiation helps in understanding the sensitivity of the loss function to changes in model parameters."
+        }
+    ]
+}

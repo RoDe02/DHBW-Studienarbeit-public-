@@ -1,0 +1,18 @@
+[
+    {
+      "id": "001",
+      "category": "Mathematics",
+      "heroImg": "\\images\\categories\\001_hero.png"
+    },
+    {
+      "id": "002",
+      "category": "Programming",
+      "heroImg": "\\images\\categories\\002_hero.png"
+    },
+    {
+      "id": "003",
+      "category": "Projekt Management",
+      "heroImg": "\\images\\categories\\003_hero.png"
+    }
+
+  ]  
