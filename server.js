@@ -7,7 +7,7 @@ import OpenAI from "openai";
 
 // Import custom modules for routing and logging
 import router from './routes/routes.js'; 
-import { logMessage } from './logger.js';
+import logger from './logger.js';
 import config from './config.js';
 
 // Initialize the Express app
@@ -163,14 +163,11 @@ const processAssistantThread = async (message, thread, assistant, threadInstruct
       const messages = await openai.beta.threads.messages.list(thread.id);
       if(messages.data[0].content[0] != []) {
         if(process.env.LOGGING_ENABLED) {    
-          logMessage(promptType, {
-            message: message,
-            answer: messages.data[0].content[0].text.value
-          });/*
           logger.info({
             message: message,
-            answer: messages.data[0].content[0].text.value
-          });*/
+            answer: messages.data[0].content[0].text.value,
+            promptType: promptType
+          });
         }
 
         return messages.data[0].content[0].text.value;

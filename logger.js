@@ -24,24 +24,10 @@ const logger = createLogger({
     }),
     customFormat, // Apply the custom format defined above.
     format.json() // Include JSON formatting in the log output.
-  )
+  ),
+  transports: [   
+    new transports.File({ filename: join('logs', 'ai_communication' + '.log') })
+  ]
 });
 
-function logMessage(promptStrategy, message) {
-  const filename = join('logs', `ai_communication_${promptStrategy}.log`);
-  
-  // Check if a transport for this filename already exists
-  let transportExists = logger.transports.find(transport => transport.filename === filename);
-  
-  // If not, add a new file transport for this filename
-  if (!transportExists) {
-    transportExists = new transports.File({ filename });
-    logger.add(transportExists);
-  }
-
-  // Log the message with additional data
-  logger.info(message);
-}
-
-// Export the configured logger for use throughout the application.
-export { logMessage };
+export default logger;
